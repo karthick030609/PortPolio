@@ -3,9 +3,11 @@
     justify-content: space-between;
     background-color: #200023;
     width: 100%;
-
-    
+    animation: main both;
+    animation-timeline: view(60% 20%);
    }
+  
+   
 .box1{
     text-align: start;
   
@@ -93,6 +95,7 @@ button:hover {
        transition: 0.3s;
 }
 
+
 @media(max-width:600px) {
    .main{
     flex-direction: column;
@@ -109,6 +112,7 @@ button:hover {
    
   
 }
+
 
 }
 

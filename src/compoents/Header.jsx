@@ -10,7 +10,7 @@ const Header = () => {
   return (
   <header className='header'>
     <h1><img src={header.name} alt="" /></h1>
-    <ul>
+    <ul className='headElement'>
        <li><a href="/">Home</a> </li>
        <li><a href='#About'>About </a> </li>
        <li><a href="#Services">Service</a> </li>
