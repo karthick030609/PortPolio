@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 const Home = () => {
   const home = {
     name: 'KARTHICK',
-    para: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, vel. Cum quisquam commodi beatae consequatur fugiat, mollitia soluta dignissimos incidunt voluptate veritatis repellendus corporis odio velit, pariatur iste distinctio natus?',
+    para: ' ipsum dolor sit amet consectetur, adipisicing elit. Error, vel. Cum quisquam commodi beatae consequatur fugiat, mollitia soluta dignissimos incidunt voluptate veritatis repellendus corporis odio velit, pariatur iste distinctio natus?',
     role1: 'Web Developer',
     role2: 'UX Designer',
     image: 'p1.png',
