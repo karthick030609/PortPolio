@@ -7,7 +7,7 @@ const Projects = () => {
         {
             
             name: 'E-commerse Website',
-            para: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta explicabo cupiditate aut velit non molestias.',
+            para: ' ipsum dolor sit amet consectetur, adipisicing elit. Dicta explicabo cupiditate aut velit non molestias.',
         },
         {
             
