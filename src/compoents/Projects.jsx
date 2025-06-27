@@ -12,7 +12,7 @@ const Projects = () => {
         {
             
             name: 'Login Page',
-            para: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo cupiditate aut velit non molestias.',
+            para: ' ipsum dolor sit amet consectetur, adipisicing elit. Explicabo cupiditate aut velit non molestias.',
         },]
   return (
     <>
