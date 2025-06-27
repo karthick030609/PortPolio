@@ -6,7 +6,7 @@ const About = () => {
     para: 'I am a Full-Stack developer based in Tamilnadu, India. I am an Information Technology pursuing  KCG College Of Technology.I am very passionate about improving my coding skills & developingapplications & websites. I build  Websites using MERN Stack.Working for myself to improve my skills. Love to build Full-Stack clones',
     Email: 'karthick426855@gmail,com',
     place: 'Tamilnadu, India - 636803',
-     resumeLink:'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+     resumeLink:'https://drive.google.com/file/d/1E2Bq0D0Yvbmea7Upu6u-j99mtX_AewxQ/view?usp=drivesdk',
   }
   return (
     <>
