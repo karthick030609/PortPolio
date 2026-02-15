@@ -1,0 +1,114 @@
+.contactSection {
+    display: flex;
+    gap: 150px;
+    background-color: #200023;
+    padding-top: 100px;
+
+}
+
+.contactLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 190px;
+    width: 300px;
+
+}
+
+.contactLeft h1 {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(223, 13, 234) 0%, rgb(246, 238, 244) 68%, rgb(246, 238, 244) 68%, rgb(241, 241, 241) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contactLeft p {
+    max-width: 550px;
+    color: #d8d8d8;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #d8d8d8;
+    font-size: 20px;
+}
+
+.contactDetail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contactDetail p {
+    padding-top: 0px;
+    color: white;
+}
+
+.contactRight {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.contactRight label {
+    color: #fffefe;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contactRight input {
+    border: none;
+    width: 350px;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 5px;
+    background: #525253;
+    color: #A0A0A0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+}
+
+.contactRight textarea {
+    width: 330px;
+    border: none;
+    padding: 20px;
+    border-radius: 4px;
+    background: #48484c;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+}
+
+.contactSubmit {
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgb(242, 0, 255) 0%, rgb(210, 102, 179) 68%, rgb(241, 241, 241) 100%);
+    font-size: 15px;
+    padding: 10px 60px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+@media(max-width:600px) {
+    .contactSection{
+        flex-direction: column;
+    }
+    .contactRight{
+    
+        margin-left: 20%;
+    }
+}
+

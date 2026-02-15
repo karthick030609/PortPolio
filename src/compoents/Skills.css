@@ -1,0 +1,175 @@
+/* ── Subtitle ── */
+.skillContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px 30px;
+    background-color: #200023;
+    color: rgb(237, 238, 239);
+    text-align: center;
+}
+
+.skillContent h2 {
+    margin: 0;
+}
+
+.skillContent .h2 {
+    background: linear-gradient(90deg, rgb(242, 0, 255) 0%, rgb(255, 255, 255) 68%, rgb(241, 241, 241) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ── Skills Grid ── */
+.skillsSection {
+    background-color: #200023;
+    padding: 40px 10% 60px;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ── Individual Skill Card ── */
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: rgba(10, 1, 14, 0.85);
+    border: 1px solid rgba(198, 9, 215, 0.2);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.skillCard:hover {
+    border-color: rgba(198, 9, 215, 0.6);
+}
+
+/* Icon wrapper — glowing circle */
+.skillIconWrap {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(242, 0, 255, 0.15) 0%, rgba(87, 12, 91, 0.25) 100%);
+    border: 1.5px solid rgba(242, 0, 255, 0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skillCard:hover .skillIconWrap {
+    transform: scale(1.12);
+    box-shadow: 0 0 20px rgba(242, 0, 255, 0.35);
+}
+
+.skillIcon {
+    font-size: 32px;
+    color: rgb(250, 22, 235);
+    transition: color 0.3s;
+}
+
+.skillCard:hover .skillIcon {
+    color: #ffffff;
+}
+
+/* Skill name */
+.skillLabel {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+/* Percentage badge */
+.skillPercent {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(242, 0, 255);
+    background: rgba(242, 0, 255, 0.1);
+    padding: 3px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* ── Achievements ── */
+.achievements {
+    background-color: #200023;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.achieve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
+}
+
+.achieve h1 {
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(242, 0, 255) 0%, rgb(255, 255, 255) 68%, rgb(241, 241, 241) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.achieve p {
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .skillsGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .achieve p {
+        padding-left: 45px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skillsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .skillCard {
+        padding: 22px 14px;
+    }
+
+    .skillIconWrap {
+        width: 56px;
+        height: 56px;
+    }
+
+    .skillIcon {
+        font-size: 26px;
+    }
+
+    .achieve p {
+        padding-left: 45px;
+        font-size: 16px;
+    }
+}

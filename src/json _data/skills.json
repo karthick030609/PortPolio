@@ -1,0 +1,34 @@
+[
+  {
+    "skillName": "C Language",
+    "skillPercentage": "70%"
+  },
+  {
+    "skillName": "Core Java",
+    "skillPercentage": "30%"
+  },
+  {
+    "skillName": "Python",
+    "skillPercentage": "40%"
+  },
+  {
+    "skillName": "HTML & CSS",
+    "skillPercentage": "80%"
+  },
+  {
+    "skillName": "JavaScript",
+    "skillPercentage": "20%"
+  },
+  {
+    "skillName": "React JS",
+    "skillPercentage": "50%"
+  },
+  {
+    "skillName": "UI & UX",
+    "skillPercentage": "40%"
+  },
+  {
+    "skillName": "GitHub",
+    "skillPercentage": "60%"
+  }
+]

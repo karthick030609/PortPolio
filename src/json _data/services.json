@@ -1,0 +1,17 @@
+[
+  {
+    "iconName": "FaGithub",
+    "role": "Web Development",
+    "para": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta explicabo cupiditate aut velit non molestias."
+  },
+  {
+    "iconName": "FaCode",
+    "role": "Designing",
+    "para": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo cupiditate aut velit non molestias."
+  },
+  {
+    "iconName": "FaCode",
+    "role": "Programming Java",
+    "para": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo cupiditate aut velit non molestias."
+  }
+]

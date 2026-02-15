@@ -1,0 +1,68 @@
+.skillsHead {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 60px;
+    background: #200023;
+    overflow: hidden;
+}
+
+.skillsHead h1 {
+    transition: 0.3s;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.skillsHead h1:hover {
+    border-bottom: 1.2px solid violet;
+    transform: scale(1.1);
+}
+
+/* Cards */
+.card {
+    width: 200px;
+    padding: 25px;
+    background: rgb(10, 1, 14);
+    color: white;
+    box-shadow: 0 5px 30px rgb(87, 12, 91);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h2 {
+    margin-top: 10px;
+}
+
+.card p {
+    color: #d8d8d8;
+}
+
+.skillsBg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 84.5%;
+    height: 100%;
+    padding: 100px;
+    background: #200023;
+}
+
+/* Icons */
+.icon {
+    font-size: 35px;
+    color: rgb(250, 22, 235);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skillsBg {
+        padding-left: 8%;
+    }
+}
+
+@media (max-width: 600px) {
+    .skillsBg {
+        padding-left: 10%;
+    }
+}

@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    margin: 0px;
+    padding: 0px;
+}
+@media(max-width:600px) {
+    .html,body{
+        width: 100%;
+        background-color: #200023;
+    }
+}

@@ -1,0 +1,23 @@
+.card1{
+    height: auto;
+    width: 80%;   
+    background-color: rgb(10, 1, 14); 
+    color: white;
+    padding: 25px;
+
+    box-shadow: 0 5px 30px rgb(87, 12, 91);
+  
+}
+.card1:hover{
+    box-shadow: 0 5px 35px rgba(225, 30, 236, 0.4);
+    transition: 0.2s;
+    transform: scale(1.03);
+}
+.card1 h2{
+    margin-top: 10px;
+}
+.card1p{
+    color: #d8d8d8;
+
+
+}
