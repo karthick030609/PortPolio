@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./About.css";
-import about from "../json _data/about.json";
+import defaultAbout from "../json _data/about.json";
 import { fadeInUp, fadeInLeft, fadeInRight, scaleIn } from "../animations";
 
+const LS_KEY = "admin_about";
+
+function loadAbout() {
+  try {
+    const stored = localStorage.getItem(LS_KEY);
+    return stored ? JSON.parse(stored) : defaultAbout;
+  } catch {
+    return defaultAbout;
+  }
+}
+
 const About = () => {
+  const [about, setAbout] = useState(loadAbout);
+
+  useEffect(() => {
+    function onStorage(e) {
+      if (e.key === LS_KEY) setAbout(loadAbout());
+    }
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
   return (
     <>
       <div id="About">
@@ -73,7 +94,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.45 }}
             >
               <span>Email : </span>
-              <a href="">{about.Email}</a>
+              <a href={`mailto:${about.email}`}>{about.email}</a>
               <br />
             </motion.div>
 

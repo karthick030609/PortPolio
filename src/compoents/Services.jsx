@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Services.css";
 import * as Icons from "react-icons/fa";
-import services from "../json _data/services.json";
+import defaultServices from "../json _data/services.json";
 import { fadeInUp, staggerContainer } from "../animations";
+
+const LS_KEY = "admin_services";
+
+function loadServices() {
+  try {
+    const stored = localStorage.getItem(LS_KEY);
+    return stored ? JSON.parse(stored) : defaultServices;
+  } catch {
+    return defaultServices;
+  }
+}
 
 const cardVariant = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
@@ -16,6 +27,16 @@ const cardVariant = {
 };
 
 const Services = () => {
+  const [services, setServices] = useState(loadServices);
+
+  useEffect(() => {
+    function onStorage(e) {
+      if (e.key === LS_KEY) setServices(loadServices());
+    }
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
   return (
     <>
       <div id="Services">

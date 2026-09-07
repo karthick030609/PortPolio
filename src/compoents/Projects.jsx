@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Projects.css";
-import projects from "../json _data/projects.json";
+import defaultProjects from "../json _data/projects.json";
 import { fadeInUp, staggerContainer } from "../animations";
+
+const LS_KEY = "admin_projects";
+
+function loadProjects() {
+  try {
+    const stored = localStorage.getItem(LS_KEY);
+    return stored ? JSON.parse(stored) : defaultProjects;
+  } catch {
+    return defaultProjects;
+  }
+}
 
 const cardVariant = {
   hidden: { opacity: 0, y: 50, scale: 0.95 },
@@ -15,6 +26,17 @@ const cardVariant = {
 };
 
 const Projects = () => {
+  const [projects, setProjects] = useState(loadProjects);
+
+  // Sync when localStorage is updated (e.g. returning from admin)
+  useEffect(() => {
+    function onStorage(e) {
+      if (e.key === LS_KEY) setProjects(loadProjects());
+    }
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
   return (
     <>
       <div id="Project" className="about">

@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
 import "./Skills.css";
-import skills from "../json _data/skills.json";
+import defaultSkills from "../json _data/skills.json";
 import { fadeInUp, staggerContainer } from "../animations";
+
+const LS_KEY = "admin_skills";
+
+function loadSkills() {
+  try {
+    const stored = localStorage.getItem(LS_KEY);
+    return stored ? JSON.parse(stored) : defaultSkills;
+  } catch {
+    return defaultSkills;
+  }
+}
 
 // Icons for each skill
 import {
@@ -69,6 +79,16 @@ const skillCardVariant = {
 };
 
 const Skills = () => {
+  const [skills, setSkills] = useState(loadSkills);
+
+  useEffect(() => {
+    function onStorage(e) {
+      if (e.key === LS_KEY) setSkills(loadSkills());
+    }
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
   return (
     <>
       <div id="Skills">
