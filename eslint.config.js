@@ -23,7 +23,10 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // Framer Motion's lowercase namespace is referenced through JSX member
+      // expressions (for example, <motion.div />), which core ESLint does not
+      // recognize as a variable reference.
+      'no-unused-vars': ['error', { varsIgnorePattern: '^(?:[A-Z_].*|motion)$' }],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

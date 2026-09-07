@@ -46,12 +46,12 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <span style={{ color: "violet" }}>My </span>Projects
+          <span style={{ color: "#67e8f9" }}>My </span>Projects
         </motion.h1>
       </div>
 
       <motion.div
-        className="skillsBg"
+        className="projects-grid"
         variants={staggerContainer(0.2)}
         initial="hidden"
         whileInView="visible"
@@ -64,8 +64,8 @@ const Projects = () => {
               key={index}
               variants={cardVariant}
               whileHover={{
-                scale: 1.03,
-                boxShadow: "0 5px 35px rgba(225, 30, 236, 0.4)",
+                y: -5,
+                boxShadow: "0 5px 35px rgba(34, 211, 238, 0.18)",
               }}
             >
               <h2>{project.name}</h2>

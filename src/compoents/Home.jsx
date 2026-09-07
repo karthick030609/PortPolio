@@ -4,6 +4,7 @@ import "./Home.css";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import home from "../json _data/home.json";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "../animations";
+import Scene3D from "./Scene3D";
 
 const iconVariant = {
   hidden: { opacity: 0, y: 20 },
@@ -26,73 +27,81 @@ const Home = () => {
 
   return (
     <>
-      <div className="main">
-        {/* Left text block */}
+      <section id="Home" className="hero">
+        <Scene3D />
+        <div className="hero-content">
         <motion.div
-          className="box1"
+          className="hero-copy"
           variants={staggerContainer(0.18)}
           initial="hidden"
           animate="visible"
         >
-          <motion.h4 variants={fadeInLeft}>I am {home.name}</motion.h4>
+          <motion.p className="hero-eyebrow" variants={fadeInLeft}>Hello, I am {home.name}</motion.p>
 
-          <motion.div className="web" variants={fadeInLeft}>
+          <motion.div className="hero-title" variants={fadeInLeft}>
             <h1>{home.role1}</h1>
             <h1>{home.role2}</h1>
           </motion.div>
 
-          <motion.p variants={fadeInUp}>{home.para}</motion.p>
+          <motion.p className="hero-description" variants={fadeInUp}>{home.para}</motion.p>
+
+          <motion.div className="hero-tech-stack" variants={fadeInUp}>
+            <span>React</span>
+            <span>Three.js</span>
+            <span>UI / UX</span>
+          </motion.div>
 
           {/* Social icons stagger */}
           <motion.div
-            className="icons"
+            className="hero-socials"
             variants={staggerContainer(0.12)}
           >
             <motion.a
               href={homeiconLink.linkFB}
-              className="a"
+              className="hero-social-link"
               target="_blank"
               rel="noreferrer"
               variants={iconVariant}
-              whileHover={{ scale: 1.3, color: "#8a2be2" }}
+              whileHover={{ y: -3, color: "#67e8f9" }}
             >
-              <FaFacebook className="a" size={30} color="aliceblue" />
+              <FaFacebook size={22} aria-hidden="true" />
             </motion.a>
             <motion.a
               href={homeiconLink.linkInsta}
               target="_blank"
               rel="noreferrer"
               variants={iconVariant}
-              whileHover={{ scale: 1.3, color: "#8a2be2" }}
+              whileHover={{ y: -3, color: "#67e8f9" }}
             >
-              <FaInstagram className="a" size={30} color="aliceblue" />
+              <FaInstagram size={22} aria-hidden="true" />
             </motion.a>
             <motion.a
               href={homeiconLink.linklinkedin}
               target="_blank"
               rel="noreferrer"
               variants={iconVariant}
-              whileHover={{ scale: 1.3, color: "#8a2be2" }}
+              whileHover={{ y: -3, color: "#67e8f9" }}
             >
-              <FaLinkedin className="a" size={30} color="aliceblue" />
+              <FaLinkedin size={22} aria-hidden="true" />
             </motion.a>
             <motion.a
               href={homeiconLink.linkGitup}
               target="_blank"
               rel="noreferrer"
               variants={iconVariant}
-              whileHover={{ scale: 1.3, color: "#8a2be2" }}
+              whileHover={{ y: -3, color: "#67e8f9" }}
             >
-              <FaGithub className="a" size={30} color="aliceblue" />
+              <FaGithub size={22} aria-hidden="true" />
             </motion.a>
           </motion.div>
 
-          <motion.div className="button" variants={fadeInUp}>
+          <motion.div className="hero-actions" variants={fadeInUp}>
             <a href="#About">
               <motion.button
+                className="hero-cta"
                 whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 8px 25px rgba(223, 15, 219, 0.6)",
+                  y: -3,
+                  boxShadow: "0 8px 25px rgba(34, 211, 238, 0.25)",
                 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -102,21 +111,18 @@ const Home = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right image */}
         <motion.div
-          className="box2"
+          className="hero-art-label"
           variants={fadeInRight}
           initial="hidden"
           animate="visible"
         >
-          <motion.img
-            src={home.image}
-            alt="profile"
-            whileHover={{ scale: 1.06 }}
-            transition={{ duration: 0.3 }}
-          />
+          <span className="hero-status"><i /> SYSTEM ONLINE</span>
+          <strong>CREATIVE DEVELOPER</strong>
+          <small>BUILD • DESIGN • SHIP</small>
         </motion.div>
-      </div>
+        </div>
+      </section>
     </>
   );
 };

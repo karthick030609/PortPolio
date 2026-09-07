@@ -99,7 +99,7 @@ const Skills = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
           >
-            <span style={{ color: "violet" }}>My </span>Skills
+            <span style={{ color: "#67e8f9" }}>My </span>Skills
           </motion.h1>
         </div>
 
@@ -132,7 +132,7 @@ const Skills = () => {
                   variants={skillCardVariant}
                   whileHover={{
                     y: -10,
-                    boxShadow: "0 12px 40px rgba(198, 9, 215, 0.45)",
+                    boxShadow: "0 12px 40px rgba(34, 211, 238, 0.2)",
                   }}
                 >
                   <div className="skillIconWrap">

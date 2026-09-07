@@ -1,47 +1,47 @@
 // Shared Framer Motion animation variants
 
 export const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 export const fadeInDown = {
-  hidden: { opacity: 0, y: -40 },
+  hidden: { opacity: 0, y: -24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 export const fadeInLeft = {
-  hidden: { opacity: 0, x: -60 },
+  hidden: { opacity: 0, x: -28 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 export const fadeInRight = {
-  hidden: { opacity: 0, x: 60 },
+  hidden: { opacity: 0, x: 28 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 export const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 0.96 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -50,7 +50,7 @@ export const staggerContainer = (staggerDelay = 0.15) => ({
   visible: {
     transition: {
       staggerChildren: staggerDelay,
-      delayChildren: 0.1,
+      delayChildren: 0.08,
     },
   },
 });
@@ -60,7 +60,7 @@ export const navSlideDown = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -69,20 +69,20 @@ export const navItem = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 // Hover helpers (inline, not variants)
 export const hoverScale = {
-  scale: 1.06,
-  transition: { duration: 0.3 },
+  y: -4,
+  transition: { duration: 0.22, ease: "easeOut" },
 };
 
 export const hoverGlow = {
-  scale: 1.05,
-  boxShadow: "0 5px 35px rgba(225, 30, 236, 0.5)",
-  transition: { duration: 0.3 },
+  y: -5,
+  boxShadow: "0 18px 38px rgba(34, 211, 238, 0.16)",
+  transition: { duration: 0.22, ease: "easeOut" },
 };
 
-export const tapShrink = { scale: 0.95 };
+export const tapShrink = { scale: 0.97 };
